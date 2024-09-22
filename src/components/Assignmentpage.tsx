@@ -161,9 +161,7 @@ const InteractiveElement = () => {
   };
 
   const getStageProgress = (stage: Stage) => {
-    const completedSteps = stage.steps.filter(
-      (step) => step.completed
-    ).length;
+    const completedSteps = stage.steps.filter((step) => step.completed).length;
     return (completedSteps / stage.steps.length) * 100;
   };
 
@@ -175,8 +173,8 @@ const InteractiveElement = () => {
 
   return (
     <animated.div style={springProps} className="p-4 bg-light min-vh-100">
-      <h1 className="h3 mb-4 text-center text-primary">
-        Software Project Status Dashboard
+      <h1 className="h2 mb-4 text-center text-primary">
+        Software Project Status
       </h1>
 
       <div className="mb-4">
@@ -197,7 +195,12 @@ const InteractiveElement = () => {
               }`}
               onClick={() => handleProjectSelect(project)}
             >
-              <div className="card-header d-flex align-items-center">
+              <div
+                style={{
+                  background: "linear-gradient(to right, #add8e6, #90ee90)",
+                }}
+                className="card-header d-flex align-items-center"
+              >
                 <h5 className="mb-0">{project.name}</h5>
               </div>
               <div className="card-body">
