@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom styles for the drawer */
+.drawer {
+  transition: width 0.3s ease-in-out;
+}
+
+.drawer-open {
+  width: 250px;
+}
+
+.drawer-closed {
+  width: 0;
+}
+
+.toggle-drawer-btn {
+  width: 100%;
+}
+
+/* Card styling */
+.card-header {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Stage container styling */
+.stage-container {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for transitions and modals */
+.interactive-container {
+  min-height: 100vh;
+}
